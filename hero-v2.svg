@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 285" width="100%" height="285">
+  <defs>
+    <!-- Deep obsidian carbon background -->
+    <linearGradient id="surface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080A" />
+      <stop offset="45%" stop-color="#0E0E12" />
+      <stop offset="100%" stop-color="#070709" />
+    </linearGradient>
+
+    <!-- Brushed platinum metallic gradient for name -->
+    <linearGradient id="titleMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="55%" stop-color="#F4F4F5" />
+      <stop offset="100%" stop-color="#A1A1AA" />
+    </linearGradient>
+
+    <!-- Top & bottom specular shimmer beams -->
+    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="subBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A1A1AA" stop-opacity="0" />
+      <stop offset="50%" stop-color="#E4E4E7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#A1A1AA" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Soft top-left & top-right monochrome spotlight -->
+    <radialGradient id="ambientTop" cx="25%" cy="0%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Pill surface gradient -->
+    <linearGradient id="pillSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181C" />
+      <stop offset="100%" stop-color="#101014" />
+    </linearGradient>
+
+    <!-- Precision micro-grid & dot matrix -->
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="rgba(255,255,255,0.055)" />
+    </pattern>
+
+    <clipPath id="cardClip">
+      <rect width="900" height="285" rx="16" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <!-- Base Carbon Surface -->
+    <rect width="900" height="285" rx="16" fill="url(#surface)" />
+    <rect width="900" height="285" fill="url(#dots)" />
+    <rect width="900" height="285" fill="url(#ambientTop)" />
+
+    <!-- Subtle Architectural Corner Crosshairs -->
+    <g stroke="rgba(255,255,255,0.16)" stroke-width="1">
+      <path d="M 24 20 L 24 28 M 20 24 L 28 24" />
+      <path d="M 876 20 L 876 28 M 872 24 L 880 24" />
+      <path d="M 24 257 L 24 265 M 20 261 L 28 261" />
+      <path d="M 876 257 L 876 265 M 872 261 L 880 261" />
+    </g>
+
+    <!-- Right-Side Animated Agent / Systems Architecture Schematic -->
+    <g transform="translate(812, 92)">
+      <circle cx="0" cy="0" r="72" fill="url(#nodeGlow)" />
+
+      <!-- Outer Orbit Ring (Slow Counter-Clockwise) -->
+      <g>
+        <circle cx="0" cy="0" r="52" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="4 6" />
+        <circle cx="52" cy="0" r="2.5" fill="#A1A1AA" opacity="0.7" />
+        <circle cx="-52" cy="0" r="2" fill="#71717A" opacity="0.5" />
+        <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="36s" repeatCount="indefinite" />
+      </g>
+
+      <!-- Middle Architecture Ring (Clockwise) -->
+      <g>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="rgba(255,255,255,0.11)" stroke-width="1" stroke-dasharray="18 8" />
+        <circle cx="0" cy="-34" r="2.5" fill="#E4E4E7" opacity="0.85" />
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="22s" repeatCount="indefinite" />
+      </g>
+
+      <!-- Inner Core Node -->
+      <circle cx="0" cy="0" r="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.18)" stroke-width="1" />
+      <circle cx="0" cy="0" r="3.5" fill="#F4F4F5">
+        <animate attributeName="opacity" values="0.95;0.35;0.95" dur="3.2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Top Specular Shimmer Beam -->
+    <rect x="-300" y="0" width="300" height="1.5" fill="url(#beam)">
+      <animate attributeName="x" values="-300;940" dur="7s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Kicker / Engineering Telemetry Line -->
+    <g transform="translate(48, 42)">
+      <rect x="0" y="-7" width="6" height="6" rx="1.5" fill="#E4E4E7">
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.8s" repeatCount="indefinite" />
+      </rect>
+      <text x="14" y="-1" fill="#71717A" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.5">
+        FULL-STACK ARCHITECTURE  ·  BACKEND &amp; LINUX SYSTEMS  ·  AGENTIC AI
+      </text>
+    </g>
+
+    <!-- Name -->
+    <text x="48" y="86" fill="url(#titleMetal)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.9">
+      Muhammad Sikandar Afzal
+    </text>
+
+    <!-- Primary Role Headline -->
+    <text x="48" y="114" fill="#E4E4E7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="15.5" font-weight="500" letter-spacing="-0.15">
+      Software &amp; Systems Engineer — Web Platforms, Backend Infrastructure &amp; LLM Agents
+    </text>
+
+    <!-- Two-Line Executive Summary -->
+    <text x="48" y="144" fill="#A1A1AA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" letter-spacing="-0.05">
+      Architecting production web applications across Angular, Next.js, and TypeScript backed by scalable server architectures.
+    </text>
+    <text x="48" y="165" fill="#A1A1AA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" letter-spacing="-0.05">
+      Engineering resilient Linux deployments, autonomous LLM workflows, and multi-agent systems from bare metal to the browser.
+    </text>
+
+    <!-- Sleek Monochrome Domain Pills -->
+    <g transform="translate(48, 186)" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="500">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="172" height="28" rx="7" fill="url(#pillSurface)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+        <circle cx="14" cy="14" r="2.2" fill="#E4E4E7" />
+        <text x="24" y="18" fill="#D4D4D8">Angular · Next.js · TS</text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(182, 0)">
+        <rect width="176" height="28" rx="7" fill="url(#pillSurface)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+        <circle cx="14" cy="14" r="2.2" fill="#A1A1AA" />
+        <text x="24" y="18" fill="#D4D4D8">Backend Servers &amp; APIs</text>
+      </g>
+
+      <!-- Pill 3 -->
+      <g transform="translate(368, 0)">
+        <rect width="166" height="28" rx="7" fill="url(#pillSurface)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+        <circle cx="14" cy="14" r="2.2" fill="#A1A1AA" />
+        <text x="24" y="18" fill="#D4D4D8">Linux &amp; Systems Infra</text>
+      </g>
+
+      <!-- Pill 4 -->
+      <g transform="translate(544, 0)">
+        <rect width="204" height="28" rx="7" fill="url(#pillSurface)" stroke="rgba(255,255,255,0.14)" stroke-width="1" />
+        <circle cx="14" cy="14" r="2.2" fill="#FFFFFF">
+          <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite" />
+        </circle>
+        <text x="24" y="18" fill="#F4F4F5">LLMs &amp; Agent Architectures</text>
+      </g>
+    </g>
+
+    <!-- Bottom Hairline Divider + Subtle Travelling Shimmer -->
+    <line x1="48" y1="234" x2="852" y2="234" stroke="rgba(255,255,255,0.07)" stroke-width="1" />
+    <rect x="852" y="233.5" width="220" height="1" fill="url(#subBeam)">
+      <animate attributeName="x" values="852;-220" dur="9s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Footer Metadata -->
+    <text x="48" y="259" fill="#71717A" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="500" letter-spacing="0.5">
+      INGOLSTADT, GERMANY
+    </text>
+
+    <g transform="translate(742, 255)">
+      <circle cx="0" cy="-4" r="3" fill="#E4E4E7">
+        <animate attributeName="opacity" values="0.9;0.25;0.9" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <text x="12" y="0" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="500" letter-spacing="0.4">
+        @sikander-afzaal
+      </text>
+    </g>
+  </g>
+
+  <!-- Precision 1px Outer Titanium Border -->
+  <rect x="0.5" y="0.5" width="899" height="284" rx="15.5" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+</svg>
