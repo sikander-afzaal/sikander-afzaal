@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="100%" height="260">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090E" />
+      <stop offset="50%" stop-color="#0C101A" />
+      <stop offset="100%" stop-color="#07090E" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1ED760">
+        <animate attributeName="stop-color" values="#1ED760;#38BDF8;#A855F7;#1ED760" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8;#A855F7;#1ED760;#38BDF8" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#10B981">
+        <animate attributeName="stop-color" values="#10B981;#1ED760;#38BDF8;#10B981" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1ED760" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#1ED760" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Card Background -->
+  <rect width="880" height="260" rx="22" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+  <rect width="880" height="260" rx="22" fill="url(#grid)" />
+
+  <!-- Animated Aurora Orbs -->
+  <circle cx="160" cy="80" r="190" fill="url(#orb1)">
+    <animate attributeName="cx" values="140;280;140" dur="11s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="70;130;70" dur="9s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="720" cy="180" r="210" fill="url(#orb2)">
+    <animate attributeName="cx" values="730;580;730" dur="13s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="180;90;180" dur="10s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Top Animated Neon Hairline -->
+  <rect x="140" y="1" width="600" height="2" rx="1" fill="url(#accentGrad)" opacity="0.85" />
+
+  <!-- Live Status Pill -->
+  <g transform="translate(52, 42)">
+    <rect x="0" y="0" width="248" height="28" rx="14" fill="rgba(30,215,96,0.08)" stroke="rgba(30,215,96,0.3)" stroke-width="1" />
+    <circle cx="16" cy="14" r="4.5" fill="#1ED760">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="r" values="4;5.5;4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="30" y="18" fill="#D1FAE5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">
+      INGOLSTADT, DE • BUILDING
+    </text>
+  </g>
+
+  <!-- Main Name -->
+  <text x="52" y="122" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.8">
+    Muhammad Sikandar Afzal
+  </text>
+
+  <!-- Animated Gradient Role Subtitle -->
+  <text x="52" y="158" fill="url(#accentGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="19" font-weight="700" letter-spacing="0.2">
+    Full-Stack Software Engineer • Creative Systems &amp; Agentic AI
+  </text>
+
+  <!-- Minimalist Bio Line -->
+  <text x="52" y="196" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="14" font-weight="400">
+    Crafting high-speed web products, refined interfaces, and intelligent software systems.
+  </text>
+
+  <!-- Animated Equalizer / Pulse Bars on Right -->
+  <g transform="translate(765, 95)" opacity="0.85">
+    <rect x="0" y="20" width="6" height="40" rx="3" fill="url(#accentGrad)">
+      <animate attributeName="height" values="18;54;18" dur="1.1s" repeatCount="indefinite" />
+      <animate attributeName="y" values="31;13;31" dur="1.1s" repeatCount="indefinite" />
+    </rect>
+    <rect x="14" y="10" width="6" height="60" rx="3" fill="url(#accentGrad)">
+      <animate attributeName="height" values="58;22;58" dur="0.9s" repeatCount="indefinite" />
+      <animate attributeName="y" values="11;29;11" dur="0.9s" repeatCount="indefinite" />
+    </rect>
+    <rect x="28" y="25" width="6" height="30" rx="3" fill="url(#accentGrad)">
+      <animate attributeName="height" values="26;64;26" dur="1.3s" repeatCount="indefinite" />
+      <animate attributeName="y" values="27;8;27" dur="1.3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="42" y="15" width="6" height="50" rx="3" fill="url(#accentGrad)">
+      <animate attributeName="height" values="46;16;46" dur="1.0s" repeatCount="indefinite" />
+      <animate attributeName="y" values="17;32;17" dur="1.0s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>
